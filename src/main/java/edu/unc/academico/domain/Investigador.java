@@ -1,5 +1,6 @@
 package edu.unc.academico.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -22,5 +23,6 @@ public class Investigador {
     private Date fehaNac;
 
     @ManyToOne
+    @JsonBackReference
     private Departamento departamento;
 }

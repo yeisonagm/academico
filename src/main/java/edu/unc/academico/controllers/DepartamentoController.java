@@ -34,7 +34,8 @@ public class DepartamentoController {
     @PostMapping
     public ResponseEntity<?> crear(@RequestBody Departamento dpto) {
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(departamentoService.saveDepartamento(dpto));
+                .body(departamentoService.saveDepart
+                amento(dpto));
     }
 
     @PutMapping("/{id}")

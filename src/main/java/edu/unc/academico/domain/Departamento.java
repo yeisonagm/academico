@@ -1,5 +1,7 @@
 package edu.unc.academico.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -16,5 +18,6 @@ public class Departamento {
     private String nombreDpto;
 
     @OneToMany(mappedBy = "departamento")
+    @JsonManagedReference
     private List<Investigador> investigadores = new ArrayList<>();
 }
